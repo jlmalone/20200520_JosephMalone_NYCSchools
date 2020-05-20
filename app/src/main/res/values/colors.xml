@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="dark_grey">#4C4C4C</color>
+    <color name="light_grey">#F5F5F5</color>
+    <color name="ripple_color_grey">#33AAAAAA</color>
+    <color name="link_color">#0077CC</color>
+</resources>

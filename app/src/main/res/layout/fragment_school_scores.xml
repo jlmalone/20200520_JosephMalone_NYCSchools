@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/school_scores_cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SchoolStatisticsFragment">
+
+    <TextView
+        android:id="@+id/school_scores_tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="School Name" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/school_scores_tv_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/school_scores_tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_tv_name"
+        tools:text="1234 Fell Street" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_score_reading_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sat_reading_score"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintBottom_toTopOf="@+id/school_scores_tv_score_reading_body"
+        app:layout_constraintEnd_toStartOf="@+id/school_scores_tv_score_writing_title"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_tv_address" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_score_writing_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sat_writing_score"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/school_scores_tv_score_reading_title"
+        app:layout_constraintTop_toTopOf="@+id/school_scores_tv_score_reading_title" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_score_math_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sat_math_score"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintBottom_toTopOf="@+id/school_scores_tv_score_math_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_tv_score_reading_body" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_score_reading_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/school_scores_tv_score_math_title"
+        app:layout_constraintEnd_toEndOf="@+id/school_scores_tv_score_reading_title"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/school_scores_tv_score_reading_title"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_tv_score_reading_title"
+        tools:text="555" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_score_writing_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/school_scores_tv_score_writing_title"
+        app:layout_constraintStart_toStartOf="@+id/school_scores_tv_score_writing_title"
+        app:layout_constraintTop_toTopOf="@+id/school_scores_tv_score_reading_body"
+        tools:text="555" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_score_math_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/school_scores_tv_score_math_title"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/school_scores_tv_score_math_title"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_tv_score_math_title"
+        tools:text="555" />
+
+    <ProgressBar
+        android:id="@+id/school_scores_pb_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/school_scores_tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintBottom_toTopOf="@+id/school_scores_btn_try_again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_iv_error"
+        tools:text="Error" />
+
+    <ImageView
+        android:id="@+id/school_scores_iv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_error"
+        android:tint="@color/dark_grey"
+        app:layout_constraintBottom_toTopOf="@+id/school_scores_tv_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/school_scores_btn_try_again"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_try_again"
+        android:textColor="@color/dark_grey"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/school_scores_tv_error"
+        app:rippleColor="@color/ripple_color_grey"
+        app:strokeColor="@color/dark_grey"
+        app:strokeWidth="2dp"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/school_scores_group_error_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="school_scores_iv_error,school_scores_tv_error" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/school_scores_group_layout_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="school_scores_tv_score_reading_title,school_scores_tv_address,school_scores_tv_score_math_body,school_scores_tv_score_writing_title,school_scores_tv_score_math_title,school_scores_tv_score_writing_body,school_scores_tv_score_reading_body,school_scores_tv_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
